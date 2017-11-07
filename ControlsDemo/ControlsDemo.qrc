@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/ControlsDemo">
+        <file>Resources/pic/btn.png</file>
+        <file>Resources/pic/btnhover.png</file>
+        <file>Resources/pic/btnpressed.png</file>
+    </qresource>
+</RCC>
