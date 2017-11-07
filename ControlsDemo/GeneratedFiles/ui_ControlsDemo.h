@@ -20,6 +20,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 #include "qcbutton.h"
+#include "qcratiobutton.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -28,6 +29,7 @@ class Ui_ControlsDemoClass
 public:
     QWidget *centralWidget;
     QCButton *pushButton;
+    QCRatioButton *radioButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -42,6 +44,9 @@ public:
         pushButton = new QCButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(20, 50, 131, 71));
+        radioButton = new QCRatioButton(centralWidget);
+        radioButton->setObjectName(QStringLiteral("radioButton"));
+        radioButton->setGeometry(QRect(40, 180, 115, 19));
         ControlsDemoClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ControlsDemoClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -63,6 +68,7 @@ public:
     {
         ControlsDemoClass->setWindowTitle(QApplication::translate("ControlsDemoClass", "ControlsDemo", Q_NULLPTR));
         pushButton->setText(QApplication::translate("ControlsDemoClass", "PushButton", Q_NULLPTR));
+        radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
     } // retranslateUi
 
 };

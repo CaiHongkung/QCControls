@@ -27,6 +27,19 @@
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QCRatioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>115</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RadioButton</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -54,6 +67,11 @@
    <class>QCButton</class>
    <extends>QPushButton</extends>
    <header>qcbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QCRatioButton</class>
+   <extends>QRadioButton</extends>
+   <header>qcratiobutton.h</header>
   </customwidget>
  </customwidgets>
  <resources>

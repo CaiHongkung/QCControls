@@ -72,6 +72,36 @@
     <ClCompile Include="QCControls\QCButton.cpp">
       <Filter>QCControls</Filter>
     </ClCompile>
+    <ClCompile Include="QCControls\QCCheckBox.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCCheckBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCCheckBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCComboBox.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCComboBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCComboBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCListView.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCRatioButton.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCRatioButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCRatioButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ControlsDemo.h">
@@ -81,6 +111,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QCControls\QCButton.h">
+      <Filter>QCControls</Filter>
+    </ClInclude>
+    <ClInclude Include="QCControls\QCListView.h">
       <Filter>QCControls</Filter>
     </ClInclude>
   </ItemGroup>
@@ -94,6 +127,15 @@
     </CustomBuild>
     <CustomBuild Include="ControlsDemo.h">
       <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCCheckBox.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCComboBox.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCRatioButton.h">
+      <Filter>QCControls</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
