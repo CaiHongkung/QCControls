@@ -9,6 +9,8 @@ class QCCheckBox : public QCheckBox,public QCInterface
 public:
     QCCheckBox(QWidget *parent);
     ~QCCheckBox();
+protected:
+	void resizeEvent(QResizeEvent *event) override;
 private:
 	void setQCStyleSheet();
 };

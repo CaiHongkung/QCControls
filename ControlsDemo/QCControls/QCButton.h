@@ -6,8 +6,9 @@ class QCButton :
 {
 public:
 	QCButton(QWidget *parent = Q_NULLPTR);
-	~QCButton();
+	~QCButton(); 
+protected:
+		void resizeEvent(QResizeEvent *event) override;
 private:
 	void setQCStyleSheet();
 };
-

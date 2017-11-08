@@ -20,6 +20,9 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 #include "qcbutton.h"
+#include "qccheckbox.h"
+#include "qccombobox.h"
+#include "qclistview.h"
 #include "qcratiobutton.h"
 
 QT_BEGIN_NAMESPACE
@@ -30,6 +33,9 @@ public:
     QWidget *centralWidget;
     QCButton *pushButton;
     QCRatioButton *radioButton;
+    QCListView *listView;
+    QCComboBox *comboBox;
+    QCCheckBox *checkBox;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -43,10 +49,19 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QCButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(20, 50, 131, 71));
+        pushButton->setGeometry(QRect(20, 50, 131, 51));
         radioButton = new QCRatioButton(centralWidget);
         radioButton->setObjectName(QStringLiteral("radioButton"));
-        radioButton->setGeometry(QRect(40, 180, 115, 19));
+        radioButton->setGeometry(QRect(20, 170, 161, 31));
+        listView = new QCListView(centralWidget);
+        listView->setObjectName(QStringLiteral("listView"));
+        listView->setGeometry(QRect(260, 20, 256, 192));
+        comboBox = new QCComboBox(centralWidget);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(260, 220, 251, 31));
+        checkBox = new QCCheckBox(centralWidget);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setGeometry(QRect(20, 230, 121, 31));
         ControlsDemoClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ControlsDemoClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -69,6 +84,7 @@ public:
         ControlsDemoClass->setWindowTitle(QApplication::translate("ControlsDemoClass", "ControlsDemo", Q_NULLPTR));
         pushButton->setText(QApplication::translate("ControlsDemoClass", "PushButton", Q_NULLPTR));
         radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
+        checkBox->setText(QApplication::translate("ControlsDemoClass", "CheckBox", Q_NULLPTR));
     } // retranslateUi
 
 };

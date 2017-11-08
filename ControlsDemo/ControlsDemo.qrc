@@ -3,5 +3,12 @@
         <file>Resources/pic/btn.png</file>
         <file>Resources/pic/btnhover.png</file>
         <file>Resources/pic/btnpressed.png</file>
+        <file>Resources/pic/DownArrow.bmp</file>
+        <file>Resources/pic/listDownArrow.png</file>
+        <file>Resources/pic/listUpArrow.png</file>
+        <file>Resources/pic/ratioOff.png</file>
+        <file>Resources/pic/ratioOn.png</file>
+        <file>Resources/pic/checked.bmp</file>
+        <file>Resources/pic/unChecked.bmp</file>
     </qresource>
 </RCC>

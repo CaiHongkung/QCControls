@@ -17,3 +17,14 @@ void QCButton::setQCStyleSheet()
 						QPushButton:hover{border-image:url(:/ControlsDemo/Resources/pic/btnhover.png)}\
 						QPushButton:pressed{border-image:url(:/ControlsDemo/Resources/pic/btnpressed.png)}");
 }
+void QCButton::resizeEvent(QResizeEvent *event)
+{
+	/*根据宽度 调整字符font-size*/
+	int width = this->width();
+	QFont font;
+	font.setPointSize(width / 200.0 * 15);
+	font.setFamily("Lucida Sans Unicode");
+	this->setFont(font);
+
+	QWidget::resizeEvent(event);
+}
