@@ -14,10 +14,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 #include "qcbutton.h"
 #include "qccheckbox.h"
@@ -33,9 +35,13 @@ public:
     QWidget *centralWidget;
     QCButton *pushButton;
     QCRatioButton *radioButton;
-    QCListView *listView;
-    QCComboBox *comboBox;
     QCCheckBox *checkBox;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QLabel *label;
+    QCListView *listView;
+    QLabel *label_2;
+    QCComboBox *comboBox;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -44,28 +50,50 @@ public:
     {
         if (ControlsDemoClass->objectName().isEmpty())
             ControlsDemoClass->setObjectName(QStringLiteral("ControlsDemoClass"));
-        ControlsDemoClass->resize(600, 400);
+        ControlsDemoClass->resize(1177, 825);
         centralWidget = new QWidget(ControlsDemoClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         pushButton = new QCButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(20, 50, 131, 51));
+        pushButton->setGeometry(QRect(40, 30, 111, 41));
         radioButton = new QCRatioButton(centralWidget);
         radioButton->setObjectName(QStringLiteral("radioButton"));
-        radioButton->setGeometry(QRect(20, 170, 161, 31));
-        listView = new QCListView(centralWidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setGeometry(QRect(260, 20, 256, 192));
-        comboBox = new QCComboBox(centralWidget);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(260, 220, 251, 31));
+        radioButton->setGeometry(QRect(40, 90, 115, 31));
         checkBox = new QCCheckBox(centralWidget);
         checkBox->setObjectName(QStringLiteral("checkBox"));
-        checkBox->setGeometry(QRect(20, 230, 121, 31));
+        checkBox->setGeometry(QRect(40, 130, 131, 31));
+        widget = new QWidget(centralWidget);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(210, 20, 258, 266));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(widget);
+        label->setObjectName(QStringLiteral("label"));
+
+        verticalLayout->addWidget(label);
+
+        listView = new QCListView(widget);
+        listView->setObjectName(QStringLiteral("listView"));
+
+        verticalLayout->addWidget(listView);
+
+        label_2 = new QLabel(widget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+
+        verticalLayout->addWidget(label_2);
+
+        comboBox = new QCComboBox(widget);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+
+        verticalLayout->addWidget(comboBox);
+
         ControlsDemoClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ControlsDemoClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 26));
+        menuBar->setGeometry(QRect(0, 0, 1177, 26));
         ControlsDemoClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(ControlsDemoClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -85,6 +113,8 @@ public:
         pushButton->setText(QApplication::translate("ControlsDemoClass", "PushButton", Q_NULLPTR));
         radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
         checkBox->setText(QApplication::translate("ControlsDemoClass", "CheckBox", Q_NULLPTR));
+        label->setText(QApplication::translate("ControlsDemoClass", "ListView", Q_NULLPTR));
+        label_2->setText(QApplication::translate("ControlsDemoClass", "ComboBox", Q_NULLPTR));
     } // retranslateUi
 
 };

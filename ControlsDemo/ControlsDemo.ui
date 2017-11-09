@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>1177</width>
+    <height>825</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QCButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>131</width>
-      <height>51</height>
+      <x>40</x>
+      <y>30</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -30,9 +30,9 @@
    <widget class="QCRatioButton" name="radioButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>170</y>
-      <width>161</width>
+      <x>40</x>
+      <y>90</y>
+      <width>115</width>
       <height>31</height>
      </rect>
     </property>
@@ -40,32 +40,12 @@
      <string>RadioButton</string>
     </property>
    </widget>
-   <widget class="QCListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>20</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QCComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>220</y>
-      <width>251</width>
-      <height>31</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QCCheckBox" name="checkBox">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>230</y>
-      <width>121</width>
+      <x>40</x>
+      <y>140</y>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
@@ -73,13 +53,52 @@
      <string>CheckBox</string>
     </property>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>258</width>
+      <height>266</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>ListView</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCListView" name="listView"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>ComboBox</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCComboBox" name="comboBox">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>1177</width>
      <height>26</height>
     </rect>
    </property>
