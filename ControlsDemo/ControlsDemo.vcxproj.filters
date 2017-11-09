@@ -138,4 +138,42 @@
       <Filter>QCControls</Filter>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\pic\btn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\btnhover.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\btnpressed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\checked.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\DownArrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\listDownArrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\listHandleBgDisabled.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\listUpArrow.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\listUpArrow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\ratioOff.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\ratioOn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pic\unChecked.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

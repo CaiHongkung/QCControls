@@ -199,6 +199,20 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\pic\btn.png" />
+    <Image Include="Resources\pic\btnhover.png" />
+    <Image Include="Resources\pic\btnpressed.png" />
+    <Image Include="Resources\pic\checked.bmp" />
+    <Image Include="Resources\pic\DownArrow.bmp" />
+    <Image Include="Resources\pic\listDownArrow.png" />
+    <Image Include="Resources\pic\listHandleBgDisabled.png" />
+    <Image Include="Resources\pic\listUpArrow.bmp" />
+    <Image Include="Resources\pic\listUpArrow.png" />
+    <Image Include="Resources\pic\ratioOff.png" />
+    <Image Include="Resources\pic\ratioOn.png" />
+    <Image Include="Resources\pic\unChecked.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
