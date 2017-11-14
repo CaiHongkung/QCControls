@@ -32,15 +32,7 @@ void QCListView::setQCStyleSheet()
     this->setStyleSheet("QListView{outline:0px;background: #1e3c6e}\
                         QListView::item{color:white;min-height:30px;border-top:1px solid #63709c;}\
                         QListView::item:selected{color:red;background:#295dab;}\
-                        QListView::item:hover{background:#295dab;}\
-                        QScrollBar:vertical{min-width:24px;min-height:80px;background:#1e3c6e;margin:24px 0 24px 0;}\
-                        QScrollBar::handle:vertical{margin:2px;height:30px;background:#295dabaa;border-radius:5px}\
-                        QScrollBar::handle:vertical:hover{background:#295dab88}\
-                        QScrollBar::handle:vertical:pressed{background:#295dabaa}\
-                        QScrollBar::sub-line:vertical{border-image:url(:/ControlsDemo/Resources/pic/listUpArrow.png);height:24px;subcontrol-position:top;subcontrol-origin:margin}\
-                        QScrollBar::add-line:vertical{border-image:url(:/ControlsDemo/Resources/pic/listDownArrow.png);height:24px;subcontrol-position:bottom;subcontrol-origin:margin}\
-                        QScrollBar::sub-page:vertical{background:#1e3c6e;}\
-                        QScrollBar::add-page:vertical{background:#1e3c6e;}");
+						QListView::item:hover{background:#295dab;}" + getQSSContent(":/ControlsDemo/Resources/scrollbar.qss"));
     return;
 }
 

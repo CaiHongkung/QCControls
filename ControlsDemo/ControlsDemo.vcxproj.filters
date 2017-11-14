@@ -102,6 +102,33 @@
     <ClCompile Include="GeneratedFiles\Release\moc_QCRatioButton.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="Models\QCEditableSQLModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCEditableSQLModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCEditableSQLModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCTableView.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCTableView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCTableView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCTreeView.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCTreeView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCTreeView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ControlsDemo.h">
@@ -115,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="QCControls\QCListView.h">
       <Filter>QCControls</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Qt\Qt5.8.0\Examples\Qt-5.8\sql\connection.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +165,15 @@
       <Filter>QCControls</Filter>
     </CustomBuild>
     <CustomBuild Include="QCControls\QCRatioButton.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Models\QCEditableSQLModel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCTableView.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCTreeView.h">
       <Filter>QCControls</Filter>
     </CustomBuild>
   </ItemGroup>
@@ -175,5 +214,10 @@
     <Image Include="Resources\pic\unChecked.bmp">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scrollbar.qss">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

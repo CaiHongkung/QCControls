@@ -22,6 +22,6 @@ void QCRatioButton::setQCStyleSheet()
                             QRadioButton::indicator:checked:pressed{background:black}*/
 	this->setStyleSheet("QRadioButton{spacing: 5px;min-height:28px;min-width:60px;border:2px solid rgb(255, 87, 90,55)}\
                             QRadioButton::indicator{min-width: 25px;min-height: 25px;}\
-                            QRadioButton::indicator:unchecked{image: url(:/ControlsDemo/Resources/pic/ratioOn.png)}\
-                            QRadioButton::indicator:checked{image: url(:/ControlsDemo/Resources/pic/ratioOff.png)}");
+                            QRadioButton::indicator:unchecked{image: url(:/ControlsDemo/Resources/pics/ratioOn.png)}\
+                            QRadioButton::indicator:checked{image: url(:/ControlsDemo/Resources/pics/ratioOff.png)}");
 }

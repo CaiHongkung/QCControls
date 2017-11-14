@@ -1,0 +1,16 @@
+QScrollBar::vertical{min-width:24px;min-height:80px;background:#1e3c6e;margin:24px 0 24px 0;}
+QScrollBar::handle:vertical{margin:2px;height:30px;background:#295dab;border-radius:5px}
+QScrollBar::handle:vertical:hover{background:#125ddb}
+QScrollBar::handle:vertical:pressed{background:#125ddb}
+QScrollBar::sub-line:vertical{border-image:url(:/ControlsDemo/Resources/pics/listUpArrow.png);height:24px;subcontrol-position:top;subcontrol-origin:margin}
+QScrollBar::add-line:vertical{border-image:url(:/ControlsDemo/Resources/pics/listDownArrow.png);height:24px;subcontrol-position:bottom;subcontrol-origin:margin}
+QScrollBar::sub-page:vertical{background:#1e3c6e;}
+QScrollBar::add-page:vertical{background:#1e3c6e;}
+QScrollBar::horizontal{min-width:50px;min-height:24px;background:#1e3c6e;margin:0px 24px 0 24px;}
+QScrollBar::handle:horizontal{margin:2px;height:24px;background:#295dabaa;border-radius:5px}
+QScrollBar::handle:horizontal:hover{background:#295dab88}
+QScrollBar::handle:horizontal:pressed{background:#295dabaa}
+QScrollBar::sub-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listLeftArrow.png);width:24px;subcontrol-position:left;subcontrol-origin:margin}
+QScrollBar::add-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listRightArrow.png);width:24px;subcontrol-position:right;subcontrol-origin:margin}
+QScrollBar::sub-page:horizontal{background:#1e3c6e;}
+QScrollBar::add-page:horizontal{background:#1e3c6e;}
