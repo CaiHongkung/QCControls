@@ -20,7 +20,7 @@ void QCCheckBox::setQCStyleSheet()
                         QCheckBox::indicator:checked:hover{background:yellow}\
                         QCheckBox::indicator:checked:pressed{background:rgb(255, 87, 90);}\
                         QCheckBox::indicator:indeterminate:hover{background:lightblue}*/
-    this->setStyleSheet("QCheckBox{spacing:2px;min-height:28px;min-width:60px;border:2px solid rgb(255, 87, 90,55)}\
+	this->setStyleSheet("QCheckBox{color:white;spacing:2px;min-height:28px;min-width:60px;border:2px solid rgb(255, 87, 90,55)}\
                         QCheckBox::indicator{min-width: 25px;min-height: 25px;border-radius:3px}\
                         QCheckBox::indicator:unchecked{image:url(:/ControlsDemo/Resources/pics/checked.bmp)}\
                         QCheckBox::indicator:checked{image:url(:/ControlsDemo/Resources/pics/unChecked.bmp)}");

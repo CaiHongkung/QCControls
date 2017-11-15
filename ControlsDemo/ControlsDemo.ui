@@ -18,109 +18,172 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
-       <string notr="true">QTabWidget::pane{background:#1e3c6e;border-left:1px solid gray;border-right:1px solid gray;
-border-bottom:1px solid gray}
-QTabWidget::tab-bar{background:#4e6c9e;left:5px;min-height:30px;}
-QTabBar::tab{background:#2e4c7e;
-      border: 1px solid #C4C4C3;
-      border-bottom-color: #1e3c6e; /* same as the pane color */
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      min-width: 8ex;min-height: 5ex;
-      padding: 2px;}
-QTabBar::tab:selected,QTabWidget::tab:hover{background:#1e3c6e}
-QTabBar::tab:selected{border-color:#9b9b9b;border-bottom-color:#1e3c6e}
-QTabBar::tab:!selected{margin-top:2px}
+       <string notr="true">QTabWidget::pane{
+background:#1e3c6e;border-left:1px solid gray;border-right:1px solid gray;
+border-bottom:1px solid gray
+}
+QTabWidget::tab-bar{
+background:#4e6c9e;left:5px;min-height:30px;
+}
+QTabBar::tab{
+background:#2e4c7e;padding:3px;color:white;border: 1px solid #C4C4C3;
+border-bottom-color: #1e3c6e; /* same as the pane color */
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+min-width: 8ex;min-height: 5ex;
+padding: 2px;
+}
+QTabBar::tab:selected,QTabWidget::tab:hover{
+background:#1e3c6e
+}
+QTabBar::tab:selected{
+border-color:#9b9b9b;border-bottom-color:#1e3c6e
+}
+QTabBar::tab:!selected{
+margin-top:2px
+}
 QTabBar::tab:selected {
-      /* expand/overlap to the left and right by 4px */
-      margin-left: -4px;
-      margin-right: -4px;
-  }
-
-  QTabBar::tab:first:selected {
-      margin-left: 0; /* the first selected tab has nothing to overlap with on the left */
-  }
-
-  QTabBar::tab:last:selected {
-      margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
-  }
-
-  QTabBar::tab:only-one {
-      margin: 0; /* if there is only one tab, we don't want overlapping margins */
-  }
+margin-left: -4px;
+margin-right: -4px;
+}
+QTabBar::tab:first:selected {
+margin-left: 0; /* the first selected tab has nothing to overlap with on the left */
+}
+QTabBar::tab:last:selected{
+margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+}
+QTabBar::tab:only-one {
+margin: 0; /* if there is only one tab, we don't want overlapping margins */
+}
 
 </string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
-        <string>Buttons</string>
+        <string>Simple Controls</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignVCenter">
-           <widget class="QCButton" name="pushButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-              <horstretch>9</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>70</width>
-              <height>45</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>PushButton</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0" alignment="Qt::AlignLeft|Qt::AlignVCenter">
-           <widget class="QCRatioButton" name="radioButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-              <horstretch>9</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>30</width>
-              <height>60</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>RadioButton</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QCCheckBox" name="checkBox">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>10</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>60</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>CheckBox</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>12</x>
+          <y>50</y>
+          <width>556</width>
+          <height>62</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QCButton" name="pushButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>9</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>140</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCCheckBox" name="checkBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>CheckBox</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QCRatioButton" name="radioButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>9</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QFontComboBox" name="fontComboBox">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>180</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>240</y>
+          <width>211</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textEdit">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>290</y>
+          <width>211</width>
+          <height>87</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>390</y>
+          <width>211</width>
+          <height>87</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="spinBox">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>180</y>
+          <width>181</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -161,7 +224,7 @@ QTabBar::tab:selected {
          <rect>
           <x>20</x>
           <y>20</y>
-          <width>150</width>
+          <width>371</width>
           <height>41</height>
          </rect>
         </property>

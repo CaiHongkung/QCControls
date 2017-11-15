@@ -39,7 +39,7 @@ void ControlsDemo::setListModel()
 	combolistView = new QCListView(this);
 	ui.comboBox->setEditable(false);
 	ui.comboBox->setModel(listmodel);
-	ui.comboBox->setMaxVisibleItems(4); //最大显示item数目
+	ui.comboBox->setMaxVisibleItems(6); //最大显示item数目
 	ui.comboBox->setView(combolistView);
 
 }

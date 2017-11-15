@@ -9,6 +9,9 @@ class QCRatioButton : public QRadioButton, public QCInterface
 public:
     QCRatioButton(QWidget *parent);
     ~QCRatioButton();
+protected:
+	void resizeEvent(QResizeEvent *event) override;
+
 private:
 	void setQCStyleSheet();
 };

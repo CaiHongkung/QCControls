@@ -13,12 +13,17 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFontComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 #include "qcbutton.h"
@@ -38,11 +43,16 @@ public:
     QGridLayout *gridLayout_6;
     QTabWidget *tabWidget;
     QWidget *tab_4;
-    QGridLayout *gridLayout_5;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QCButton *pushButton;
-    QCRatioButton *radioButton;
     QCCheckBox *checkBox;
+    QCRatioButton *radioButton;
+    QFontComboBox *fontComboBox;
+    QLineEdit *lineEdit;
+    QTextEdit *textEdit;
+    QPlainTextEdit *plainTextEdit;
+    QSpinBox *spinBox;
     QWidget *tab;
     QGridLayout *gridLayout_2;
     QCTreeView *treeView;
@@ -71,81 +81,101 @@ public:
         gridLayout_6->setObjectName(QStringLiteral("gridLayout_6"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setStyleSheet(QLatin1String("QTabWidget::pane{background:#1e3c6e;border-left:1px solid gray;border-right:1px solid gray;\n"
-"border-bottom:1px solid gray}\n"
-"QTabWidget::tab-bar{background:#4e6c9e;left:5px;min-height:30px;}\n"
-"QTabBar::tab{background:#2e4c7e;\n"
-"      border: 1px solid #C4C4C3;\n"
-"      border-bottom-color: #1e3c6e; /* same as the pane color */\n"
-"      border-top-left-radius: 4px;\n"
-"      border-top-right-radius: 4px;\n"
-"      min-width: 8ex;min-height: 5ex;\n"
-"      padding: 2px;}\n"
-"QTabBar::tab:selected,QTabWidget::tab:hover{background:#1e3c6e}\n"
-"QTabBar::tab:selected{border-color:#9b9b9b;border-bottom-color:#1e3c6e}\n"
-"QTabBar::tab:!selected{margin-top:2px}\n"
+        tabWidget->setStyleSheet(QLatin1String("QTabWidget::pane{\n"
+"background:#1e3c6e;border-left:1px solid gray;border-right:1px solid gray;\n"
+"border-bottom:1px solid gray\n"
+"}\n"
+"QTabWidget::tab-bar{\n"
+"background:#4e6c9e;left:5px;min-height:30px;\n"
+"}\n"
+"QTabBar::tab{\n"
+"background:#2e4c7e;padding:3px;color:white;border: 1px solid #C4C4C3;\n"
+"border-bottom-color: #1e3c6e; /* same as the pane color */\n"
+"border-top-left-radius: 4px;\n"
+"border-top-right-radius: 4px;\n"
+"min-width: 8ex;min-height: 5ex;\n"
+"padding: 2px;\n"
+"}\n"
+"QTabBar::tab:selected,QTabWidget::tab:hover{\n"
+"background:#1e3c6e\n"
+"}\n"
+"QTabBar::tab:selected{\n"
+"border-color:#9b9b9b;border-bottom-color:#1e3c6e\n"
+"}\n"
+"QTabBar::tab:!selected{\n"
+"margin-top:2px\n"
+"}\n"
 "QTabBar::tab:selected {\n"
-"      /* expand/overlap to the left and right by 4px */\n"
-"      margin-left: -4px;\n"
-"      margin-right: -4px;\n"
-"  }\n"
-"\n"
-"  QTabBar::tab:first:selected {\n"
-"      margin-left: 0; /* the first selected tab has nothing to overlap with on the left */\n"
-"  }\n"
-"\n"
-"  QTabBar::tab:last:selected {\n"
-"      marg"
-                        "in-right: 0; /* the last selected tab has nothing to overlap with on the right */\n"
-"  }\n"
-"\n"
-"  QTabBar::tab:only-one {\n"
-"      margin: 0; /* if there is only one tab, we don't want overlapping margins */\n"
-"  }\n"
+"margin-left: -4px;\n"
+"margin-right: -4px;\n"
+"}\n"
+"QTabBar::tab:first:selected {\n"
+"margin-left: 0; /* the first selected tab has nothing to overlap with on the left */\n"
+"}\n"
+"QTabBar::tab:last:selected{\n"
+"margin-right: 0; /* the last selected tab has nothing to overlap"
+                        " with on the right */\n"
+"}\n"
+"QTabBar::tab:only-one {\n"
+"margin: 0; /* if there is only one tab, we don't want overlapping margins */\n"
+"}\n"
 "\n"
 ""));
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
-        gridLayout_5 = new QGridLayout(tab_4);
-        gridLayout_5->setSpacing(6);
-        gridLayout_5->setContentsMargins(11, 11, 11, 11);
-        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
-        gridLayout = new QGridLayout();
+        layoutWidget = new QWidget(tab_4);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(12, 50, 556, 62));
+        gridLayout = new QGridLayout(layoutWidget);
         gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        pushButton = new QCButton(tab_4);
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QCButton(layoutWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(9);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
-        pushButton->setMinimumSize(QSize(70, 45));
+        pushButton->setMinimumSize(QSize(140, 60));
 
-        gridLayout->addWidget(pushButton, 0, 0, 1, 1, Qt::AlignLeft|Qt::AlignVCenter);
+        gridLayout->addWidget(pushButton, 0, 0, 1, 1);
 
-        radioButton = new QCRatioButton(tab_4);
-        radioButton->setObjectName(QStringLiteral("radioButton"));
-        sizePolicy.setHeightForWidth(radioButton->sizePolicy().hasHeightForWidth());
-        radioButton->setSizePolicy(sizePolicy);
-        radioButton->setMinimumSize(QSize(30, 60));
-
-        gridLayout->addWidget(radioButton, 2, 0, 1, 1, Qt::AlignLeft|Qt::AlignVCenter);
-
-        checkBox = new QCCheckBox(tab_4);
+        checkBox = new QCCheckBox(layoutWidget);
         checkBox->setObjectName(QStringLiteral("checkBox"));
         QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(10);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(checkBox->sizePolicy().hasHeightForWidth());
         checkBox->setSizePolicy(sizePolicy1);
-        checkBox->setMinimumSize(QSize(60, 30));
+        checkBox->setMinimumSize(QSize(200, 30));
 
-        gridLayout->addWidget(checkBox, 1, 0, 1, 1);
+        gridLayout->addWidget(checkBox, 0, 1, 1, 1);
 
+        radioButton = new QCRatioButton(layoutWidget);
+        radioButton->setObjectName(QStringLiteral("radioButton"));
+        sizePolicy.setHeightForWidth(radioButton->sizePolicy().hasHeightForWidth());
+        radioButton->setSizePolicy(sizePolicy);
+        radioButton->setMinimumSize(QSize(200, 30));
 
-        gridLayout_5->addLayout(gridLayout, 0, 0, 1, 1);
+        gridLayout->addWidget(radioButton, 0, 2, 1, 1);
 
+        fontComboBox = new QFontComboBox(tab_4);
+        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
+        fontComboBox->setGeometry(QRect(30, 180, 211, 31));
+        lineEdit = new QLineEdit(tab_4);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(30, 240, 211, 31));
+        textEdit = new QTextEdit(tab_4);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setGeometry(QRect(30, 290, 211, 87));
+        plainTextEdit = new QPlainTextEdit(tab_4);
+        plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
+        plainTextEdit->setGeometry(QRect(30, 390, 211, 87));
+        spinBox = new QSpinBox(tab_4);
+        spinBox->setObjectName(QStringLiteral("spinBox"));
+        spinBox->setGeometry(QRect(260, 180, 181, 31));
         tabWidget->addTab(tab_4, QString());
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
@@ -187,7 +217,7 @@ public:
         tab_5->setObjectName(QStringLiteral("tab_5"));
         comboBox = new QCComboBox(tab_5);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(20, 20, 150, 41));
+        comboBox->setGeometry(QRect(20, 20, 371, 41));
         QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Minimum);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
@@ -212,7 +242,7 @@ public:
 
         retranslateUi(ControlsDemoClass);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(ControlsDemoClass);
@@ -222,8 +252,8 @@ public:
     {
         ControlsDemoClass->setWindowTitle(QApplication::translate("ControlsDemoClass", "ControlsDemo", Q_NULLPTR));
         pushButton->setText(QApplication::translate("ControlsDemoClass", "PushButton", Q_NULLPTR));
-        radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
         checkBox->setText(QApplication::translate("ControlsDemoClass", "CheckBox", Q_NULLPTR));
+        radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("ControlsDemoClass", "Buttons", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ControlsDemoClass", "treeView", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ControlsDemoClass", "tableView", Q_NULLPTR));

@@ -19,6 +19,6 @@ void QCTreeView::setQCStyleSheet()
                         QCTreeView::item{border:1px solid transparent; border-bottom-color:gray;min-height:30px}\
                         QCTreeView::item:hover{background-color: #1e3c6e88;}\
                         QCTreeView::item:selected{background-color: #1e3c6e55;}\
-                        QCTreeView::branch:adjoins-item {image:url(:/ControlsDemo/Resources/pics/treeRightArrow.png)}\
-                        QCTreeView::branch:open{image:url(:/ControlsDemo/Resources/pics/treeRightDownArrow.png)}"+getQSSContent(":/ControlsDemo/Resources/scrollbar.qss"));
+                        QCTreeView::branch:adjoins-item {image:url(:/ControlsDemo/Resources/pics/rightArrow.png)}\
+                        QCTreeView::branch:open{image:url(:/ControlsDemo/Resources/pics/rightDownArrow.png)}"+getQSSContent(":/ControlsDemo/Resources/scrollbar.qss"));
 }

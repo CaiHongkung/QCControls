@@ -15,5 +15,7 @@
         <file>Resources/pics/ratioOff.png</file>
         <file>Resources/pics/ratioOn.png</file>
         <file>Resources/pics/unChecked.bmp</file>
+        <file>Resources/pics/rightArrow.png</file>
+        <file>Resources/pics/rightDownArrow.png</file>
     </qresource>
 </RCC>
