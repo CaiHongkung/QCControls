@@ -129,6 +129,15 @@
     <ClCompile Include="GeneratedFiles\Release\moc_QCTreeView.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCDial.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCDial.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCDial.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ControlsDemo.h">
@@ -176,6 +185,9 @@
     <CustomBuild Include="QCControls\QCTreeView.h">
       <Filter>QCControls</Filter>
     </CustomBuild>
+    <CustomBuild Include="QCControls\QCDial.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\pic\btn.png">
@@ -199,9 +211,6 @@
     <Image Include="Resources\pic\listHandleBgDisabled.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\pic\listUpArrow.bmp">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\pic\listUpArrow.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -212,6 +221,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\pic\unChecked.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\pics\UpArrow.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

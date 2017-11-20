@@ -29,6 +29,7 @@
 #include "qcbutton.h"
 #include "qccheckbox.h"
 #include "qccombobox.h"
+#include "qcdial.h"
 #include "qclistview.h"
 #include "qcratiobutton.h"
 #include "qctableview.h"
@@ -48,11 +49,6 @@ public:
     QCButton *pushButton;
     QCCheckBox *checkBox;
     QCRatioButton *radioButton;
-    QFontComboBox *fontComboBox;
-    QLineEdit *lineEdit;
-    QTextEdit *textEdit;
-    QPlainTextEdit *plainTextEdit;
-    QSpinBox *spinBox;
     QWidget *tab;
     QGridLayout *gridLayout_2;
     QCTreeView *treeView;
@@ -63,7 +59,17 @@ public:
     QGridLayout *gridLayout_4;
     QCListView *listView;
     QWidget *tab_5;
+    QWidget *layoutWidget1;
+    QGridLayout *gridLayout_5;
+    QPlainTextEdit *plainTextEdit;
+    QTextEdit *textEdit;
+    QFontComboBox *fontComboBox;
     QCComboBox *comboBox;
+    QSpinBox *spinBox;
+    QLineEdit *lineEdit;
+    QWidget *tab_6;
+    QGridLayout *gridLayout_7;
+    QCDial *dial;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -161,21 +167,6 @@ public:
 
         gridLayout->addWidget(radioButton, 0, 2, 1, 1);
 
-        fontComboBox = new QFontComboBox(tab_4);
-        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
-        fontComboBox->setGeometry(QRect(30, 180, 211, 31));
-        lineEdit = new QLineEdit(tab_4);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(30, 240, 211, 31));
-        textEdit = new QTextEdit(tab_4);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(30, 290, 211, 87));
-        plainTextEdit = new QPlainTextEdit(tab_4);
-        plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(30, 390, 211, 87));
-        spinBox = new QSpinBox(tab_4);
-        spinBox->setObjectName(QStringLiteral("spinBox"));
-        spinBox->setGeometry(QRect(260, 180, 181, 31));
         tabWidget->addTab(tab_4, QString());
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
@@ -215,18 +206,109 @@ public:
         tabWidget->addTab(tab_3, QString());
         tab_5 = new QWidget();
         tab_5->setObjectName(QStringLiteral("tab_5"));
-        comboBox = new QCComboBox(tab_5);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(20, 20, 371, 41));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Minimum);
+        layoutWidget1 = new QWidget(tab_5);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(21, 21, 616, 311));
+        gridLayout_5 = new QGridLayout(layoutWidget1);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QStringLiteral("gridLayout_5"));
+        gridLayout_5->setContentsMargins(0, 0, 0, 0);
+        plainTextEdit = new QPlainTextEdit(layoutWidget1);
+        plainTextEdit->setObjectName(QStringLiteral("plainTextEdit"));
+
+        gridLayout_5->addWidget(plainTextEdit, 4, 1, 1, 1);
+
+        textEdit = new QTextEdit(layoutWidget1);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+
+        gridLayout_5->addWidget(textEdit, 4, 2, 1, 1);
+
+        fontComboBox = new QFontComboBox(layoutWidget1);
+        fontComboBox->setObjectName(QStringLiteral("fontComboBox"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(fontComboBox->sizePolicy().hasHeightForWidth());
+        fontComboBox->setSizePolicy(sizePolicy2);
+        fontComboBox->setMinimumSize(QSize(200, 30));
+        fontComboBox->setStyleSheet(QLatin1String("QFontComboBox{background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px}\n"
+"QFontComboBox::editable{background:#23b8ff;}\n"
+"QFontComboBox::drop-down{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/DownArrow.bmp);}\n"
+"QFontComboBox::drop-down:pressed{position:relative;top:1px;left:1px}\n"
+"QFontComboBox::drop-down:on {top: 1px;left: 1px}\n"
+"QListView{color:white;outline:0px;background: #1e3c6e}\n"
+"QListView::item{color:white;min-height:30px;border-top:1px solid #63709c;}\n"
+"QListView::item:selected{color:red;background:#295dab;}\n"
+"QListView::item:hover{background:#295dab;}\n"
+"QScrollBar::vertical{min-width:24px;min-height:80px;background:#1e3c6e;margin:24px 0 24px 0;}\n"
+"QScrollBar::handle:vertical{margin:2px;min-height:50px;background:#295dab;border-radius:5px}\n"
+"QScrollBar::handle:vertical:hover{background:#125ddb}\n"
+"QScrollBar::handle:vertical:pressed{background:#125ddb}\n"
+"QScrollBar::sub-line:vertical{border-image:url(:/ControlsDemo/Resources/pics"
+                        "/listUpArrow.png);height:24px;subcontrol-position:top;subcontrol-origin:margin}\n"
+"QScrollBar::add-line:vertical{border-image:url(:/ControlsDemo/Resources/pics/listDownArrow.png);height:24px;subcontrol-position:bottom;subcontrol-origin:margin}\n"
+"QScrollBar::sub-page:vertical{background:#1e3c6e;}\n"
+"QScrollBar::add-page:vertical{background:#1e3c6e;}\n"
+"QScrollBar::horizontal{min-width:50px;min-height:24px;background:#1e3c6e;margin:0px 24px 0 24px;}\n"
+"QScrollBar::handle:horizontal{margin:2px;height:24px;background:#295dabaa;border-radius:5px}\n"
+"QScrollBar::handle:horizontal:hover{background:#295dab88}\n"
+"QScrollBar::handle:horizontal:pressed{background:#295dabaa}\n"
+"QScrollBar::sub-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listLeftArrow.png);width:24px;subcontrol-position:left;subcontrol-origin:margin}\n"
+"QScrollBar::add-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listRightArrow.png);width:24px;subcontrol-position:right;subcontrol-origin:margin}\n"
+"QScrollBar:"
+                        ":sub-page:horizontal{background:#1e3c6e;}\n"
+"QScrollBar::add-page:horizontal{background:#1e3c6e;}\n"
+""));
+
+        gridLayout_5->addWidget(fontComboBox, 0, 2, 1, 1);
+
+        comboBox = new QCComboBox(layoutWidget1);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
         sizePolicy2.setHeightForWidth(comboBox->sizePolicy().hasHeightForWidth());
         comboBox->setSizePolicy(sizePolicy2);
         comboBox->setMinimumSize(QSize(150, 30));
-        tabWidget->addTab(tab_5, QString());
 
-        gridLayout_6->addWidget(tabWidget, 0, 0, 1, 1);
+        gridLayout_5->addWidget(comboBox, 0, 0, 1, 2);
+
+        spinBox = new QSpinBox(layoutWidget1);
+        spinBox->setObjectName(QStringLiteral("spinBox"));
+        spinBox->setMinimumSize(QSize(200, 40));
+        spinBox->setStyleSheet(QLatin1String("QSpinBox{font:bold 19px;background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px;padding-right:15px;selection-background-color: red;}\n"
+"QSpinBox::down-button{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/DownArrow.bmp);}\n"
+"QSpinBox::down-button:pressed{position:relative;top:1px;left:1px}\n"
+"QSpinBox::up-button{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/UpArrow.bmp);}\n"
+"QSpinBox::up-button:pressed{position:relative;top:1px;left:1px}\n"
+""));
+
+        gridLayout_5->addWidget(spinBox, 3, 0, 1, 1);
+
+        lineEdit = new QLineEdit(layoutWidget1);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setMinimumSize(QSize(200, 40));
+        lineEdit->setStyleSheet(QLatin1String("QLineEdit{font:bold 19px;background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px;}\n"
+""));
+
+        gridLayout_5->addWidget(lineEdit, 3, 1, 1, 1);
+
+        tabWidget->addTab(tab_5, QString());
+        tab_6 = new QWidget();
+        tab_6->setObjectName(QStringLiteral("tab_6"));
+        gridLayout_7 = new QGridLayout(tab_6);
+        gridLayout_7->setSpacing(6);
+        gridLayout_7->setContentsMargins(11, 11, 11, 11);
+        gridLayout_7->setObjectName(QStringLiteral("gridLayout_7"));
+        dial = new QCDial(tab_6);
+        dial->setObjectName(QStringLiteral("dial"));
+        dial->setStyleSheet(QLatin1String("border-image: url(:/ControlsDemo/Resources/pics/dialBg.png);\n"
+"image: url(:/ControlsDemo/Resources/pics/dial.png);\n"
+"background-image: url(:/ControlsDemo/Resources/pics/dial.png);"));
+
+        gridLayout_7->addWidget(dial, 0, 0, 1, 1);
+
+        tabWidget->addTab(tab_6, QString());
+
+        gridLayout_6->addWidget(tabWidget, 1, 0, 1, 1);
 
         ControlsDemoClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ControlsDemoClass);
@@ -242,7 +324,7 @@ public:
 
         retranslateUi(ControlsDemoClass);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(ControlsDemoClass);
@@ -254,11 +336,12 @@ public:
         pushButton->setText(QApplication::translate("ControlsDemoClass", "PushButton", Q_NULLPTR));
         checkBox->setText(QApplication::translate("ControlsDemoClass", "CheckBox", Q_NULLPTR));
         radioButton->setText(QApplication::translate("ControlsDemoClass", "RadioButton", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("ControlsDemoClass", "Buttons", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("ControlsDemoClass", "Simple Controls", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("ControlsDemoClass", "treeView", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("ControlsDemoClass", "tableView", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("ControlsDemoClass", "listView", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_5), QApplication::translate("ControlsDemoClass", "Input Widgets", Q_NULLPTR));
+        tabWidget->setTabText(tabWidget->indexOf(tab_6), QApplication::translate("ControlsDemoClass", "Page", Q_NULLPTR));
     } // retranslateUi
 
 };

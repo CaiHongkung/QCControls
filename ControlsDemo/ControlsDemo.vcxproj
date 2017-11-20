@@ -83,6 +83,9 @@
     <ClCompile Include="GeneratedFiles\Debug\moc_QCComboBox.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCDial.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_QCEditableSQLModel.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -110,6 +113,9 @@
     <ClCompile Include="GeneratedFiles\Release\moc_QCComboBox.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCDial.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_QCEditableSQLModel.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -127,6 +133,7 @@
     <ClCompile Include="QCControls\QCButton.cpp" />
     <ClCompile Include="QCControls\QCCheckBox.cpp" />
     <ClCompile Include="QCControls\QCComboBox.cpp" />
+    <ClCompile Include="QCControls\QCDial.cpp" />
     <ClCompile Include="QCControls\QCInterface.cpp" />
     <ClCompile Include="QCControls\QCListView.cpp" />
     <ClCompile Include="QCControls\QCRatioButton.cpp" />
@@ -207,6 +214,16 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_SQL_LIB  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\QCControls" "-I$(QTDIR)\include\QtSql" "-fstdafx.h" "-f../../QCControls/QCComboBox.h"</Command>
     </CustomBuild>
+    <CustomBuild Include="QCControls\QCDial.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QCDial.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../QCControls/QCDial.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_SQL_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\..\MyControls" "-I.\QCControls" "-I$(QTDIR)\include\QtSql" "-ID:\Qt\Qt5.8.0\Examples\Qt-5.8\sql"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QCDial.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp" "-fstdafx.h" "-f../../QCControls/QCDial.h"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_SQL_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I.\QCControls" "-I$(QTDIR)\include\QtSql"</Command>
+    </CustomBuild>
     <ClInclude Include="QCControls\QCListView.h" />
     <CustomBuild Include="QCControls\QCRatioButton.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
@@ -253,6 +270,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\pics\UpArrow.bmp" />
     <Image Include="Resources\pic\btn.png" />
     <Image Include="Resources\pic\btnhover.png" />
     <Image Include="Resources\pic\btnpressed.png" />
@@ -260,7 +278,6 @@
     <Image Include="Resources\pic\DownArrow.bmp" />
     <Image Include="Resources\pic\listDownArrow.png" />
     <Image Include="Resources\pic\listHandleBgDisabled.png" />
-    <Image Include="Resources\pic\listUpArrow.bmp" />
     <Image Include="Resources\pic\listUpArrow.png" />
     <Image Include="Resources\pic\ratioOff.png" />
     <Image Include="Resources\pic\ratioOn.png" />

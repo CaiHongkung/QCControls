@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/ControlsDemo">
+        <file>Resources/pics/dialBg.png</file>
         <file>Resources/scrollbar.qss</file>
         <file>Resources/pics/btn.png</file>
         <file>Resources/pics/btnhover.png</file>
@@ -7,15 +8,15 @@
         <file>Resources/pics/checked.bmp</file>
         <file>Resources/pics/DownArrow.bmp</file>
         <file>Resources/pics/listDownArrow.png</file>
-        <file>Resources/pics/listHandleBgDisabled.png</file>
         <file>Resources/pics/listLeftArrow.png</file>
         <file>Resources/pics/listRightArrow.png</file>
-        <file>Resources/pics/listUpArrow.bmp</file>
         <file>Resources/pics/listUpArrow.png</file>
         <file>Resources/pics/ratioOff.png</file>
         <file>Resources/pics/ratioOn.png</file>
-        <file>Resources/pics/unChecked.bmp</file>
         <file>Resources/pics/rightArrow.png</file>
         <file>Resources/pics/rightDownArrow.png</file>
+        <file>Resources/pics/unChecked.bmp</file>
+        <file>Resources/pics/UpArrow.bmp</file>
+        <file>Resources/pics/dial.png</file>
     </qresource>
 </RCC>

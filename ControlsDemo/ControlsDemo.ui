@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_6">
-    <item row="0" column="0">
+    <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
        <string notr="true">QTabWidget::pane{
@@ -59,7 +59,7 @@ margin: 0; /* if there is only one tab, we don't want overlapping margins */
 </string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -134,56 +134,6 @@ margin: 0; /* if there is only one tab, we don't want overlapping margins */
          </item>
         </layout>
        </widget>
-       <widget class="QFontComboBox" name="fontComboBox">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>180</y>
-          <width>211</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>240</y>
-          <width>211</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QTextEdit" name="textEdit">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>290</y>
-          <width>211</width>
-          <height>87</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPlainTextEdit" name="plainTextEdit">
-        <property name="geometry">
-         <rect>
-          <x>30</x>
-          <y>390</y>
-          <width>211</width>
-          <height>87</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QSpinBox" name="spinBox">
-        <property name="geometry">
-         <rect>
-          <x>260</x>
-          <y>180</y>
-          <width>181</width>
-          <height>31</height>
-         </rect>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -219,28 +169,132 @@ margin: 0; /* if there is only one tab, we don't want overlapping margins */
        <attribute name="title">
         <string>Input Widgets</string>
        </attribute>
-       <widget class="QCComboBox" name="comboBox">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>371</width>
-          <height>41</height>
+          <x>21</x>
+          <y>21</y>
+          <width>616</width>
+          <height>311</height>
          </rect>
         </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>150</width>
-          <height>30</height>
-         </size>
-        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="4" column="1">
+          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QTextEdit" name="textEdit"/>
+         </item>
+         <item row="0" column="2">
+          <widget class="QFontComboBox" name="fontComboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFontComboBox{background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px}
+QFontComboBox::editable{background:#23b8ff;}
+QFontComboBox::drop-down{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/DownArrow.bmp);}
+QFontComboBox::drop-down:pressed{position:relative;top:1px;left:1px}
+QFontComboBox::drop-down:on {top: 1px;left: 1px}
+QListView{color:white;outline:0px;background: #1e3c6e}
+QListView::item{color:white;min-height:30px;border-top:1px solid #63709c;}
+QListView::item:selected{color:red;background:#295dab;}
+QListView::item:hover{background:#295dab;}
+QScrollBar::vertical{min-width:24px;min-height:80px;background:#1e3c6e;margin:24px 0 24px 0;}
+QScrollBar::handle:vertical{margin:2px;min-height:50px;background:#295dab;border-radius:5px}
+QScrollBar::handle:vertical:hover{background:#125ddb}
+QScrollBar::handle:vertical:pressed{background:#125ddb}
+QScrollBar::sub-line:vertical{border-image:url(:/ControlsDemo/Resources/pics/listUpArrow.png);height:24px;subcontrol-position:top;subcontrol-origin:margin}
+QScrollBar::add-line:vertical{border-image:url(:/ControlsDemo/Resources/pics/listDownArrow.png);height:24px;subcontrol-position:bottom;subcontrol-origin:margin}
+QScrollBar::sub-page:vertical{background:#1e3c6e;}
+QScrollBar::add-page:vertical{background:#1e3c6e;}
+QScrollBar::horizontal{min-width:50px;min-height:24px;background:#1e3c6e;margin:0px 24px 0 24px;}
+QScrollBar::handle:horizontal{margin:2px;height:24px;background:#295dabaa;border-radius:5px}
+QScrollBar::handle:horizontal:hover{background:#295dab88}
+QScrollBar::handle:horizontal:pressed{background:#295dabaa}
+QScrollBar::sub-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listLeftArrow.png);width:24px;subcontrol-position:left;subcontrol-origin:margin}
+QScrollBar::add-line:horizontal{border-image:url(:/ControlsDemo/Resources/pics/listRightArrow.png);width:24px;subcontrol-position:right;subcontrol-origin:margin}
+QScrollBar::sub-page:horizontal{background:#1e3c6e;}
+QScrollBar::add-page:horizontal{background:#1e3c6e;}
+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QCComboBox" name="comboBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>30</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QSpinBox" name="spinBox">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSpinBox{font:bold 19px;background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px;padding-right:15px;selection-background-color: red;}
+QSpinBox::down-button{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/DownArrow.bmp);}
+QSpinBox::down-button:pressed{position:relative;top:1px;left:1px}
+QSpinBox::up-button{border-radius:3px;min-width:30px;border-image:url(:/ControlsDemo/Resources/pics/UpArrow.bmp);}
+QSpinBox::up-button:pressed{position:relative;top:1px;left:1px}
+</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{font:bold 19px;background:#1e3c6e;color:white;border:2px solid gray;border-radius:3px;}
+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Page</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QCDial" name="dial">
+          <property name="styleSheet">
+           <string notr="true">border-image: url(:/ControlsDemo/Resources/pics/dialBg.png);
+image: url(:/ControlsDemo/Resources/pics/dial.png);
+background-image: url(:/ControlsDemo/Resources/pics/dial.png);</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -302,6 +356,11 @@ margin: 0; /* if there is only one tab, we don't want overlapping margins */
    <class>QCTableView</class>
    <extends>QTableView</extends>
    <header>qctableview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QCDial</class>
+   <extends>QDial</extends>
+   <header>qcdial.h</header>
   </customwidget>
  </customwidgets>
  <resources>
