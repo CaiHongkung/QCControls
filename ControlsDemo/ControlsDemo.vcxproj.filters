@@ -138,6 +138,33 @@
     <ClCompile Include="QCControls\QCDial.cpp">
       <Filter>QCControls</Filter>
     </ClCompile>
+    <ClCompile Include="QCStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCStyle.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCStyle.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCControls\QCTabWidget.cpp">
+      <Filter>QCControls</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCTabWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCTabWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QCStyleDark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCStyleDark.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QCStyleDark.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_ControlsDemo.h">
@@ -155,11 +182,11 @@
     <ClInclude Include="D:\Qt\Qt5.8.0\Examples\Qt-5.8\sql\connection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_ControlsDemo.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="ControlsDemo.ui">
-      <Filter>Form Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="ControlsDemo.qrc" />
     <CustomBuild Include="QCControls\QCInterface.h">
       <Filter>QCControls</Filter>
@@ -187,6 +214,18 @@
     </CustomBuild>
     <CustomBuild Include="QCControls\QCDial.h">
       <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCStyle.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCControls\QCTabWidget.h">
+      <Filter>QCControls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QCStyleDark.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ControlsDemo.ui">
+      <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

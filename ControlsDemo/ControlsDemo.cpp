@@ -2,6 +2,8 @@
 #include"qdebug.h"
 #include "qstringlist.h"
 #include "connection.h"
+#include "QCStyle.h"
+#include "QCStyleDark.h"
 
 ControlsDemo::ControlsDemo(QWidget *parent)
 	: QMainWindow(parent)
@@ -19,6 +21,10 @@ ControlsDemo::ControlsDemo(QApplication &app, QWidget *parent)
 	setTableModel();
 	connect(ui.pushButton, SIGNAL(clicked()), ui.pushButton, SIGNAL(myClick()));
 	connect(ui.pushButton, SIGNAL(myClick()), this, SLOT(btnClick()));
+	connect(ui.dockWidget, SIGNAL(dockLocationChanged(Qt::DockWidgetArea)), ui.tabWidget_3, SLOT(changeTabPosition(Qt::DockWidgetArea)));
+	connect(ui.comboBox_style, SIGNAL(activated(QString)), this, SLOT(changeStyle(QString)));
+
+
 	setTreeModel(app);
 }
 void ControlsDemo::btnClick(){
@@ -81,4 +87,13 @@ void ControlsDemo::setTreeModel(QApplication &app)
 		}
 	}
 
+}
+void ControlsDemo::changeStyle(const QString &styleName)
+{
+	if (styleName == "Normal") {
+		QApplication::setStyle(new QCStyle());
+	}
+	else if (styleName == "Dark"){
+		QApplication::setStyle(new QCStyleDark());
+	}
 }

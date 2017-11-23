@@ -18,5 +18,8 @@
         <file>Resources/pics/unChecked.bmp</file>
         <file>Resources/pics/UpArrow.bmp</file>
         <file>Resources/pics/dial.png</file>
+        <file>Resources/pics/tabItem.png</file>
+        <file>Resources/pics/tabItemDark.png</file>
+        <file>Resources/pics/tabItemSelected.png</file>
     </qresource>
 </RCC>

@@ -30,4 +30,6 @@ private:
 
 private slots:
 	void btnClick();
+	void changeStyle(const QString &styleName);
+
 };

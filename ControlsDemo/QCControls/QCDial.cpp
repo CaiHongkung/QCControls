@@ -38,6 +38,7 @@ void QCDial::paintEvent(QPaintEvent *pe)
 	painter.drawPixmap(rect, dial, sourceRect);
 
 
+
 }
 void QCDial::resizeEvent(QResizeEvent *e)
 {
